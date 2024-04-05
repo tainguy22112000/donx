@@ -84,3 +84,25 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer components {
+  .transition-ease {
+    @apply transition-opacity duration-200 ease-linear;
+  }
+
+  .divider {
+    @apply bg-[#4c4c4c] border-t border-solid border-[#bbb];
+  }
+
+  .vertical-divider {
+    @apply h-px w-full bg-[#4c4c4c] mt-[15px] mb-[10px];
+  }
+
+  .bg-gradient-01 {
+    @apply bg-gradient-to-r from-gradient-1 from-20% to-gradient-2 to-100%;
+  }
+
+  .text-underline {
+    @apply content-[''] absolute h-[10px] w-full top-[30px] left-0 bg-gradient-01;
+  }
+}

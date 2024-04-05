@@ -1,3 +1,4 @@
+import "swiper/swiper-bundle.css";
 import "./globals.css";
 
 import type { Metadata } from "next";

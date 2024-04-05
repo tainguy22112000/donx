@@ -10,8 +10,6 @@ export const Header = () => {
   const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState(false);
 
-  console.log(pathname);
-
   return (
     <div className="relative h-[60px] md:h-20 md:py-10">
       <header
@@ -21,28 +19,28 @@ export const Header = () => {
         <a
           href="https://donx.net/"
           className={clsx(
-            "flex flex-row items-center transition-opacity duration-200 ease-linear",
+            "flex flex-row items-center transition-ease",
             openMenu && "opacity-0 ml-0"
           )}
         >
           <div
-            className="flex flex-row justify-center items-center gap-2 opacity-100 transition-opacity duration-200 ease-linear"
+            className="flex flex-row items-center justify-center gap-2 opacity-100 transition-ease"
             id="action-icon"
           >
             <Image
               src="icons/gold-donx.svg"
               alt="gold-donx-icon"
               className="header-logo"
-              width={24}
-              height={24}
+              width={40}
+              height={40}
             />
-            <div className="text-xl text-white">DonX</div>
+            <div className="text-xl font-bold text-white md:text-2xl">DonX</div>
           </div>
         </a>
 
         <div
           className={clsx(
-            "flex opacity-0 flex-row gap-2.5 transition-opacity duration-200 ease-linear w-0 md:gap-5",
+            "flex opacity-0 flex-row gap-2.5 transition-ease w-0 md:gap-5",
             openMenu && "opacity-100 w-fit"
           )}
           id="header-menu"
@@ -50,19 +48,19 @@ export const Header = () => {
           <Link
             className={clsx(
               "text-white w-[80px] h-full text-center relative cursor-pointer text-sm font-bold active-menu",
-              pathname === "/" &&
-                "before:content-[''] before:absolute before:h-[10px] before:w-full before:top-[30px] before:left-0 before:bg-white"
+              pathname === "/" && "before:text-underline"
             )}
-            href=""
-            // href="./index.html"
+            href="/"
           >
             Home
           </Link>
 
           <Link
-            className="text-white w-[80px] h-full text-center relative cursor-pointer text-sm font-bold"
-            // href="./museum.html"
-            href=""
+            className={clsx(
+              "text-white w-[80px] h-full text-center relative cursor-pointer text-sm font-bold",
+              pathname === "/museum" && "before:text-underline"
+            )}
+            href="/museum"
           >
             Museum
           </Link>
@@ -75,10 +73,7 @@ export const Header = () => {
             id="action-icon"
             width={24}
             height={24}
-            className={clsx(
-              "ml-5 transition-opacity duration-200 ease-linear",
-              openMenu && "opacity-0 w-0 h-auto ml-0"
-            )}
+            className={clsx("ml-5 transition-ease", openMenu && "opacity-0 w-0 h-auto ml-0")}
           />
           <Image
             src="icons/shopping.svg"
@@ -86,10 +81,7 @@ export const Header = () => {
             id="action-icon"
             width={24}
             height={24}
-            className={clsx(
-              "ml-5 transition-opacity duration-200 ease-linear ",
-              openMenu && "opacity-0 w-0 h-auto ml-0 "
-            )}
+            className={clsx("ml-5 transition-ease", openMenu && "opacity-0 w-0 h-auto ml-0 ")}
           />
           <Image
             src="icons/user.svg"
@@ -97,10 +89,7 @@ export const Header = () => {
             id="action-icon"
             width={24}
             height={24}
-            className={clsx(
-              "ml-5 transition-opacity duration-200 ease-linear",
-              openMenu && "opacity-0 w-0 h-auto ml-0"
-            )}
+            className={clsx("ml-5 transition-ease", openMenu && "opacity-0 w-0 h-auto ml-0")}
           />
 
           <div className="ml-5" onClick={() => setOpenMenu(!openMenu)}>
