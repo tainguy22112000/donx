@@ -1,0 +1,190 @@
+.card-item {
+  min-width: calc(100vw - 40px);
+  height: 550px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image-container {
+  width: 100%;
+  position: relative;
+  max-width: 100%;
+  height: 430px;
+}
+
+.image-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1) 14%, rgba(0, 0, 0, 0.1) 60%);
+}
+
+.card-text {
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-text-header {
+  background: linear-gradient(to right, #6c4b1f 10%, #e9b671 50%, #e9b671 100%);
+  font-size: 1rem;
+  line-height: 1.1;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-text-title {
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.card-text-sub {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.card-image {
+  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+  height: 430px;
+  filter: grayscale(1);
+  transition: all 0.5s ease-in-out;
+}
+
+.card-item:hover .card-image {
+  filter: grayscale(0);
+}
+
+.card-active {
+  > img {
+    filter: grayscale(0);
+  }
+}
+
+.card-info {
+  width: 100%;
+  height: 120px;
+  padding: 0 30px;
+  gap: 20px;
+}
+
+.card-content {
+  gap: 10px;
+
+  > h6 {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+}
+
+.card-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  height: 30px;
+  width: 135px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card-btn:hover,
+.card-btn:active {
+  background-color: #fff;
+  color: #000;
+}
+
+@media only screen and (min-width: 1024px) {
+  .card-item {
+    min-width: 300px;
+    height: 424px;
+  }
+
+  .image-container {
+    height: 331px;
+  }
+
+  .card-image {
+    height: 331px;
+  }
+
+  .card-text {
+    right: 25px;
+  }
+
+  .card-text-header {
+    font-size: 13px;
+  }
+
+  .card-text-title {
+    font-size: 32px;
+  }
+
+  .card-text-sub {
+    font-size: 13px;
+  }
+
+  .card-info {
+    height: 93px;
+    gap: 10px;
+
+    > img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .card-content {
+    gap: 6px;
+
+    > h6 {
+      font-size: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .card-item {
+    min-width: 390px;
+    height: 550px;
+  }
+
+  .image-container {
+    height: 430px;
+  }
+
+  .card-image {
+    height: 430px;
+  }
+
+  .card-info {
+    height: 120px;
+    gap: 20px;
+
+    > img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .card-text {
+    right: 40px;
+  }
+
+  .card-content {
+    gap: 10px;
+
+    > h6 {
+      font-size: 13px;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <footer className="px-5 py-[30px] bg-black flex flex-col items-center justify-center md:flex-row md:px-0 md:py-[34px] lg:py-8">
-      <ul className="text-white max-w-[764px] flex flex-col justify-center md:justify-between md:flex-row lg:max-w-[936px]">
+      <ul className="text-white max-w-[764px] w-full flex flex-col justify-center md:justify-between md:flex-row lg:max-w-[936px]">
         <li>
           <div className="mb-1 text-[13px] uppercase font-bold text-gray-2">
             StarkDeck Corp Ltd.,

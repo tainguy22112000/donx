@@ -1,0 +1,13 @@
+:root {
+  --swiper-navigation-size: 25px;
+}
+
+.swiper-button-disabled {
+  opacity: 0 !important;
+  transition: all 1s ease-in-out !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-weight: bold;
+}
