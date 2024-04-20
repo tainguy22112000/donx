@@ -45,6 +45,15 @@ hr {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
 /* ----------------------- SCROLLBAR ----------------------- */
 /* width */
 ::-webkit-scrollbar {
@@ -113,5 +122,20 @@ body {
 
   .text-underline {
     @apply content-[''] absolute h-[10px] w-full top-[30px] left-0 bg-gradient-01;
+  }
+
+  .btn {
+    padding: 7px 20px;
+    border-radius: 50px;
+    height: 30px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    width: 100px;
+    background: linear-gradient(to right, #6c4b1f 20%, #e9b671 100%);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }

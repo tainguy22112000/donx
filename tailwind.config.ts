@@ -35,6 +35,7 @@ const config: Config = {
       "gray-2": "#858585",
       "gray-3": "#c2c2c2",
       "dark-1": "#1b1b1b",
+      "dark-2": "#101010",
       "gradient-1": "#6c4b1f",
       "gradient-2": "#e9b671",
     },

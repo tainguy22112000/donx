@@ -1,0 +1,144 @@
+.art-item {
+  min-width: 280px;
+  height: 404px;
+  background-color: #1b1b1b;
+  transform: translateY(5px);
+  transition: all 0.5s ease-in-out;
+}
+
+.art-item:hover {
+  background: linear-gradient(to right, #6c4b1f 20%, #e9b671 100%);
+  transform: translateY(-5px);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.art-thumb {
+  position: relative;
+  padding: 5px 5px 1px;
+  overflow: hidden;
+}
+
+.art-overlay {
+  position: absolute;
+  bottom: 0px;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 10%, rgba(0, 0, 0, 0.1) 50%);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px 30px 15px;
+
+  > span {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+.art-image {
+  width: 100%;
+  height: 334px;
+  object-fit: cover;
+}
+
+.art-btn {
+  position: absolute;
+  top: 23px;
+  left: 22px;
+}
+
+.art-description {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 10px 20px;
+  height: 64px;
+}
+
+.art-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  > h6 {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  > p {
+    font-size: 9px;
+    line-height: 1.2;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .art-image {
+    height: 413px;
+  }
+
+  .art-item {
+    min-width: 340px;
+    height: 490px;
+  }
+
+  .art-description {
+    > img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .art-overlay {
+    padding: 27px 30px 15px;
+
+    > span {
+      font-size: 20px;
+    }
+  }
+
+  .art-text {
+    > p {
+      font-size: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .art-image {
+    height: 535px;
+  }
+
+  .art-item {
+    min-width: 440px;
+    height: 635px;
+  }
+
+  .art-description {
+    padding: 15px 20px;
+    > img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .art-overlay {
+    padding: 50px 40px 20px;
+  }
+
+  .art-text {
+    > h6 {
+      font-size: 20px;
+    }
+
+    > p {
+      font-size: 12px;
+    }
+  }
+}

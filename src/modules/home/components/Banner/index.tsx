@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Autoplay, EffectFade, Navigation, Pagination, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const Banner = () => {
+export const Banner = () => {
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, EffectFade, Autoplay]}
@@ -57,5 +57,3 @@ const Banner = () => {
     </Swiper>
   );
 };
-
-export default Banner;

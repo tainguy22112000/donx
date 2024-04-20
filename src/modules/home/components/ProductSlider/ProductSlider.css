@@ -1,0 +1,7 @@
+.swiper-scrollbar-drag {
+  --swiper-scrollbar-drag-bg-color: theme(colors.gray-3);
+}
+
+.art-container::-webkit-scrollbar {
+  display: none;
+}

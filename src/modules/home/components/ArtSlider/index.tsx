@@ -25,6 +25,7 @@ export const CardSlider = () => {
         direction="horizontal"
         speed={500}
         className="w-screen h-full mt-0"
+        scrollbar={{ enabled: true }}
         breakpoints={{
           1024: {
             slidesPerView: 3,

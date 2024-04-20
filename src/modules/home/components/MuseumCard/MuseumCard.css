@@ -1,0 +1,139 @@
+.museum-img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(1);
+}
+
+.museum-right:hover > img {
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(0);
+}
+
+.museum-right {
+  position: relative;
+}
+
+.museum-right:hover > img {
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(0);
+}
+
+.picasso-banner {
+  position: absolute;
+  inset: auto 0 0;
+  width: 100%;
+  height: 42px;
+  object-fit: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #1b1b1b;
+  padding: 0 10px;
+  margin-bottom: 4px;
+
+  > h1 {
+    text-wrap: nowrap;
+    font-size: 12px;
+  }
+
+  > p {
+    font-size: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+.picasso-divider {
+  height: 100%;
+  width: 2px;
+  background-color: #0f0f10;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.picasso-title {
+  position: absolute;
+  bottom: 42px;
+  padding: 36px 80px 15px 20px;
+  font-size: 24px;
+  width: 100%;
+  line-height: 1.1;
+  font-weight: bold;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 0.8) 40%,
+    transparent 100%
+  );
+}
+
+@media only screen and (min-width: 1024px) {
+  .museum-right {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .musem-img-1 {
+    height: 100%;
+  }
+
+  .picasso-divider {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .picasso-banner {
+    height: 54px;
+    padding: 0 20px;
+
+    > h1 {
+      font-size: 20px;
+    }
+
+    > p {
+      font-size: 12px;
+    }
+  }
+
+  .picasso-title {
+    bottom: 54px;
+    padding: 38px 92px 25px 25px;
+    font-size: 32px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .picasso-banner {
+    height: 100px;
+    padding: 0 40px;
+
+    > h1 {
+      font-size: 32px;
+    }
+
+    > p {
+      font-size: 1rem;
+    }
+  }
+
+  .picasso-title {
+    bottom: 100px;
+    padding: 54px 150px 55px 60px;
+    font-size: 64px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .picasso-divider {
+    margin-left: 62px;
+    margin-right: 50px;
+  }
+
+  .picasso-banner {
+    > p {
+      font-size: 20px;
+    }
+  }
+}
